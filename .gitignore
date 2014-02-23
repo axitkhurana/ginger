@@ -1,0 +1,4 @@
+*.pyc
+*.egg-info
+
+ginger/local_settings.py
