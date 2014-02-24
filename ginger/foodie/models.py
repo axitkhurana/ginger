@@ -18,6 +18,7 @@ class Event(models.Model):
     start_time = models.DateTimeField()
     end_time = models.DateTimeField()
     vendors = models.ManyToManyField(Vendor, null=True, blank=True)
+    fb_id = models.CharField(max_length=60)
 
     def __unicode__(self):
         return self.name
