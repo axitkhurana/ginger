@@ -19,10 +19,10 @@ class Command(BaseCommand):
             obj, created = Vendor.objects.get_or_create(name=vendor['name'],
                                                         defaults=vendor)
             if created:
-                self.stdout.write('New vendor added: %s' % obj.name)
+                self.stdout.write('New vendor added: {}'.format(obj.name))
             else:
                 # TODO Update vendors here
-                self.stdout.write('Vendor updated: %s' % obj.name)
+                self.stdout.write('Vendor updated: {}'.format(obj.name))
 
     def _vendors(self, html):
         """Yields vendor information dict from HTML text"""

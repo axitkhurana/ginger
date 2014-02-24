@@ -1,3 +1,6 @@
 DEBUG = True
 
 TEMPLATE_DEBUG = True
+
+FB_APP_ID = '644622211112039'
+FB_APP_SECRET = 'bsffc04fhkf9kbk9db44bdfbc4oabf58'
