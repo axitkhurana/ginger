@@ -19,6 +19,7 @@ class Command(BaseCommand):
                           location=details['location'].strip(),
                           start_time=parse(details['start_time']),
                           end_time=parse(details['end_time']),
+                          fb_id=details['id']
                           )
             event.save()
 
@@ -28,7 +29,7 @@ class Command(BaseCommand):
             if vendors:
                 event.vendors.add(*vendors)
 
-            self.stdout.write('New event added! {} with vendors {}'.format(event.name, vendors))
+            self.stdout.write('New event added! {}'.format(event.name))
 
     def _events(self):
         """Yields events after last saved event from OffTheGrid's FB page"""
