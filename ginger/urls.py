@@ -6,7 +6,7 @@ admin.autodiscover()
 urlpatterns = patterns(
     '',
     # Examples:
-    # url(r'^$', 'ginger.views.home', name='home'),
+    url(r'^$', 'ginger.foodie.views.vendors', name='vendors'),
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
