@@ -15,6 +15,10 @@ class Command(BaseCommand):
     def handle(self, *args, **kwargs):
         for fb_event in self._events():
             details = fbconsole.get('/{}'.format(fb_event['id']))
+
+            if 'end_time' not in details:
+                details['end_time'] = details['start_time']
+
             event = Event(name=details['name'],
                           location=details['location'].strip(),
                           start_time=parse(details['start_time']),
